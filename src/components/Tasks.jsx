@@ -12,3 +12,4 @@ const Tasks = ({ tasks, onDelete }) => {
 };
 
 export default Tasks;
+[]

@@ -6,7 +6,7 @@ const AddTask = ({ onAdd }) => {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && text !== "") {
-      onAdd({ text });
+      onAdd({ task: text });
       setText("");
     }
   };
@@ -14,11 +14,12 @@ const AddTask = ({ onAdd }) => {
   return (
     <Box>
       <Input
-        variant="flushed"
-        placeholder="Add Task"
+        variant="filled"
+        placeholder="Enter Quick Task Here"
         value={text}
         onChange={(e) => setText(e.target.value)}
         onKeyDown={handleKeyDown}
+        color={'#4fb9fc'}
       />
     </Box>
   );
